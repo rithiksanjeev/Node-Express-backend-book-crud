@@ -1,6 +1,7 @@
 // express server
 
 // getting express module
+//require('dotenv').config()
 const express = require('express')
 const app = express() // we will get app object
 const port = 3000
@@ -11,10 +12,15 @@ const bookBaseUrl = '/api/v1/books'
 //   res.send('Hello World check!')
 // })
 
+// console.log(process.env);
+// app.listen(process.env.SERVER_PORT, () => {
+//   console.log(`Example app listening on port ${process.env.SERVER_PORT}`)
+// })
+
+console.log(port);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
 
 // create read update delete
 let books = []
